@@ -16,14 +16,21 @@
     <link rel="stylesheet" href="/css/style.css">
   </head>
   <body>
-    <header>
-      <h1>Pangdoro</h1>
+    <header class="container">
+      <div class="row">
+        <div class="col-6 offset-3 title">
+          <h1>Kanbandoro</h1>
+          <h5>By: Kompiang</h5>
+        </div>
+        <div class="col-6 offset-3">
+          <hr>
+        </div>
+      </div>
     </header>
 
-    <main class="container-fluid">
+    <main class="container">
       <div class="row">
-        <section class="pomodoro col-md-5">
-          
+        <section class="pomodoro col-md-6 offset-md-3">
           <div class="pomodoro__header">
             <div class="pomodoro__setting">
               <span class="material-icons">settings</span>
@@ -46,8 +53,10 @@
           </div>
           
         </section>
-  
-        <section class="kanban col-md-7">
+      </div>
+
+      <div class="row">
+        <section class="kanban">
           <div class="row kanban-root">
 
             <div class="col-md-4 kanban__column">
@@ -71,7 +80,7 @@
             <div class="col-md-4 kanban__column">
               <div class="kanban__title">Not Started</div>
               <div class="kanban__item">
-                <div class="kanban__item-input" contenteditable></div>
+                <div class="kanban__item-input" contenteditable>Wash the dish</div>
                 <div class="kanban__dropzone"></div>
               </div>
               <button type="button" class="kanban__add-item">+ Add Button</button>
