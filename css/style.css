@@ -47,6 +47,13 @@ header .title {
   align-items: flex-end;
   justify-content: space-between;
   font-weight: 800;
+  margin-bottom: 20px;
+}
+
+header .title h1 {
+  text-decoration: underline;
+  text-underline-offset: 7px;
+  text-decoration-thickness: 3px;
 }
 
 .pomodoro__settings button{
