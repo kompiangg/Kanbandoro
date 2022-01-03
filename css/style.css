@@ -1,0 +1,12 @@
+:root {
+  --color-red: #D95550;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: var(--color-red);
+  width: 100vw;
+  height: 100vh;
+}
