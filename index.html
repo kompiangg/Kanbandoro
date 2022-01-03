@@ -31,10 +31,27 @@
     <main class="container">
       <div class="row">
         <section class="pomodoro col-md-6 offset-md-3">
-          <div class="pomodoro__header">
-            <div class="pomodoro__setting">
+          <div class="pomodoro__settings">
+            <button type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
               <span class="material-icons">settings</span>
               <p>Settings</p>
+            </button>
+
+            <div class="pomodoro__modal modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Pomodoro Settings</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="pomodoro__modal-settings modal-body">
+                    
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Save</button>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
