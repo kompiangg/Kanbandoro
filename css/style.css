@@ -1,5 +1,6 @@
 :root {
   --color-red: #D95550;
+  --color-red-darker: #7e3d3b;
   --main-font: 'Nunito', sans-serif;
   --main-button-background-color: none rgba(255, 255, 255, 0.11);
 }
@@ -9,7 +10,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   background-color: var(--color-red);
-  min-width: 100vw;
+  max-width: 100vw;
   min-height: 100vh;
   font-family: var(--main-font);
   color: white;
@@ -18,6 +19,12 @@ body {
 h1, h2, h3, h4, h5, h6, p {
   margin: 0;
   padding: 0;
+}
+
+hr {
+  opacity: .7;
+  height: 2px!important;
+  margin-top: 5px;
 }
 
 button {
@@ -39,6 +46,7 @@ header .title {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
+  font-weight: 800;
 }
 
 .pomodoro__settings button{
@@ -147,4 +155,68 @@ header .title {
   transition: all 0.2s;
   transform: translateY(10px);
   box-shadow: rgb(235 235 235) 0px 0px 0px;
+}
+
+.kanban__column {
+  padding-right: 40px;
+}
+
+.kanban__column hr{
+  background: white!important;
+  opacity: .8;
+  margin-top: 0px;
+  height: 2px;
+}
+
+.kanban__title {
+  font-weight: 800;
+  font-size: 2rem;
+}
+
+.kanban__item-input {
+  color: black;
+  font-weight: 600;
+  padding: 10px 15px;
+  box-sizing: border-box;
+  background: white;
+  border-radius: 5px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.kanban__item-input:focus {
+  outline-color: var(--color-red);
+}
+
+.kanban__dropzone {
+  height: 15px;
+  transition: background 0.15s, height 0.15s;
+}
+
+.kanban__dropzone-active {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  height: 23px;
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.281);
+}
+
+.kanban__add-item {
+  margin-top: 5px;
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.404);
+  color: white;
+  position: relative;
+}
+
+.kanban__add-item::after {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  border: rgba(0, 0, 0, 0.404) 3px dashed;
 }
