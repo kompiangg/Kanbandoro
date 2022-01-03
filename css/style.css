@@ -1,6 +1,7 @@
 :root {
   --color-red: #D95550;
   --main-font: 'Nunito', sans-serif;
+  --main-button-background-color: none rgba(255, 255, 255, 0.11);
 }
 
 body {
@@ -8,8 +9,8 @@ body {
   padding: 0;
   box-sizing: border-box;
   background-color: var(--color-red);
-  width: 100vw;
-  height: 100vh;
+  min-width: 100vw;
+  min-height: 100vh;
   font-family: var(--main-font);
   color: white;
 }
@@ -17,6 +18,10 @@ body {
 h1, h2, h3, h4, h5, h6, p {
   margin: 0;
   padding: 0;
+}
+
+button {
+  border-style: none;
 }
 
 h1 {
@@ -42,14 +47,104 @@ header .title {
 }
 
 .pomodoro__settings p {
-  font-size: 1rem;
+  font-size: 0.9rem;
   padding-left: 5px;
+}
+
+.pomodoro__settings {
+  float: right;
+}
+
+.pomodoro__settings button.setting-button, 
+.pomodoro__wrapper{
+  border-style: none;
+  background: var(--main-button-background-color);
+  color: white;
+  padding: 6px 20px;
+  margin-bottom: 10px;
+  transition: background 0.3s;
+  border-radius: 4px;
+}
+
+.pomodoro__wrapper {
+  padding: 30px;
+  padding-bottom: 40px;
+  border-radius: 10px;
+  margin-bottom: 50px;
+  clear: right;
+}
+
+.pomodoro__settings button.setting-button:hover {
+  background: none rgba(255, 255, 255, 0.555);
 }
 
 .pomodoro__modal {
   color: black;
 }
 
+.pomodoro__sections {
+  display: flex;
+  justify-content: space-around;
+  padding: 0px 30px 20px 30px;
+}
+
+.pomodoro__sections button {
+  background: none;
+  color: white;
+  font-weight: 800;
+  font-size: 1.25rem;
+  border-radius: 5px;
+  padding: 4px 10px;
+  transition: background 0.3s;
+}
+
+.pomodoro__sections button.pomodoro__section-button-active{
+  background: rgb(0 0 0 / 17%);
+}
+
 .pomodoro__countdown {
+  text-align: center;
   clear: left;
+}
+
+.pomodoro__countdown h2{
+  font-weight: 700;
+  font-size: 7.5rem;
+}
+
+.pomodoro__start {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pomodoro__start-button {
+  border: white solid 3px;
+  background: white;
+  color: var(--color-red);
+  font-weight: 800;
+  font-size: 2rem;
+  border-radius: 5px;
+  padding: 10px 30px;
+  transition: all 0.2s;
+  box-shadow: rgb(235 235 235) 0px 10px 0px;
+}
+
+.pomodoro__start-button:hover {
+  border: white solid 3px;
+  transform: translateY(-4px);
+  box-shadow: rgb(235 235 235) 0px 14px 0px;
+}
+
+.pomodoro__start-button-active {
+  border: white solid 3px;
+  color: white;
+  background: none;
+  font-weight: 800;
+  font-size: 2rem;
+  border-radius: 5px;
+  padding: 10px 30px;
+  transition: all 0.2s;
+  transform: translateY(10px);
+  box-shadow: rgb(235 235 235) 0px 0px 0px;
 }

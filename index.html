@@ -18,11 +18,11 @@
   <body>
     <header class="container">
       <div class="row">
-        <div class="col-6 offset-3 title">
+        <div class="col-8 offset-2 title">
           <h1>Kanbandoro</h1>
           <h5>By: Kompiang</h5>
         </div>
-        <div class="col-6 offset-3">
+        <div class="col-8 offset-2">
           <hr>
         </div>
       </div>
@@ -32,8 +32,8 @@
       <div class="row">
         <section class="pomodoro col-md-6 offset-md-3">
           <div class="pomodoro__settings">
-            <button type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-              <span class="material-icons">settings</span>
+            <button class="setting-button" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+              <span class="material-icons md-18">settings</span>
               <p>Settings</p>
             </button>
 
@@ -55,18 +55,20 @@
             </div>
           </div>
 
-          <div class="pomodoro__section">
-            <button type="button">Pomodoro</button>
-            <button type="button">Short Break</button>
-            <button type="button">Long Break</button>
-          </div>
-
-          <div class="pomodoro__countdown">
-            <h2><span id="minute">01</span>:<span id="second">01</span></h2>
-          </div>
-
-          <div class="pomodoro__button">
-            <button type="button">Start</button>
+          <div class="pomodoro__wrapper">
+            <div class="pomodoro__sections">
+              <button class="pomodoro__section-button" type="button">Pomodoro</button>
+              <button class="pomodoro__section-button" type="button">Short Break</button>
+              <button class="pomodoro__section-button" type="button">Long Break</button>
+            </div>
+  
+            <div class="pomodoro__countdown">
+              <h2><span id="minute">01</span>:<span id="second">01</span></h2>
+            </div>
+  
+            <div class="pomodoro__start">
+              <button class="pomodoro__start-button" type="button">Start</button>
+            </div>
           </div>
           
         </section>
