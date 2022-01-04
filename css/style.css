@@ -172,12 +172,14 @@ header .title h1 {
   background: white!important;
   opacity: .8;
   margin-top: 0px;
+  margin-bottom: 0px;
   height: 2px;
 }
 
 .kanban__title {
   font-weight: 800;
   font-size: 2rem;
+  user-select: none;
 }
 
 .kanban__item-input {
@@ -201,8 +203,6 @@ header .title h1 {
 }
 
 .kanban__dropzone-active {
-  margin-top: 5px;
-  margin-bottom: 5px;
   height: 23px;
   border-radius: 5px;
   background: rgba(0, 0, 0, 0.281);
