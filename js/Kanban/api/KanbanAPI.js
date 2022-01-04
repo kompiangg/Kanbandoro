@@ -1,5 +1,5 @@
 export default class KanbanAPI {
-  static getiItems(columnId) {
+  static getItems(columnId) {
     const data = read();
     const column = data.find(e => e.id === columnId);
 
@@ -36,14 +36,15 @@ export default class KanbanAPI {
 
   static updateItem(itemId, newProps) {
     const data = read();
+    console.log(itemId)
     const [item, currentColumn] = (() => {
       for (const column of data) {
-        const item = column.items.find(item => item.id === itemId)
+        const item = column.items.find(item => item.id === itemId);
         if (item) {
           return [item, column]
         }
-        return [undefined, undefined]
       }
+      return [undefined, undefined]
     })();
 
     if (!item) {
