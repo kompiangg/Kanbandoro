@@ -118,7 +118,8 @@ header .title h1 {
   font-size: 1.25rem;
   border-radius: 5px;
   padding: 4px 10px;
-  transition: background 0.3s;
+  transition: background 0.2s;
+  transition-timing-function: ease-in;
 }
 
 .pomodoro__sections button.pomodoro__section-button-active{
@@ -172,6 +173,11 @@ header .title h1 {
   box-shadow: rgb(235 235 235) 0px 0px 0px;
 }
 
+.pomodoro__start-button-active:hover {
+  transform: translateY(10px);
+  box-shadow: rgb(235 235 235) 0px 0px 0px;
+}
+
 .pomodoro__input-time {
   margin-top: 10px;
   padding: 4px 10px;
@@ -197,7 +203,6 @@ header .title h1 {
 .kanban__title {
   font-weight: 800;
   font-size: 2rem;
-  user-select: none;
 }
 
 .kanban__item-input {
