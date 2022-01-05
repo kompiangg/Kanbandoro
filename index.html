@@ -34,18 +34,23 @@
               <p>Settings</p>
             </button>
 
-            <div class="pomodoro__modal modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-              <div class="modal-dialog modal-dialog-centered">
+            <div class="pomodoro__modal modal fade " id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog modal-sm modal-dialog-centered">
                 <div class="modal-content">
                   <div class="modal-header">
                     <h5 class="modal-title" id="staticBackdropLabel">Pomodoro Settings</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
                   </div>
-                  <div class="pomodoro__modal-settings modal-body">
-                    
+                  <div class="container modal-body">
+                    <div class="row pomodoro__modal-settings">
+                      <!-- <div class="col-md-4 text-center">
+                        <p>Pomodoro</p>
+                        <input type="number" min="0" step="1" class="pomodoro__input-time" placeholder="0">
+                      </div> -->
+                    </div>
                   </div>
                   <div class="modal-footer">
-                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Save</button>
+                    <button id="pomodo__save-button" type="button" class="btn btn-dark" data-bs-dismiss="modal">Save</button>
                   </div>
                 </div>
               </div>

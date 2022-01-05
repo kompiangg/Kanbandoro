@@ -7,13 +7,17 @@ export default class PomodoroAPI {
       return []
     }
 
-    return pomodoroSection.time;
+    return [pomodoroSection.time, pomodoroSection.title];
+  }
+
+  static getArrItem() {
+    const data = read();
+    return data;
   }
 
   static setItem(sectionId, newData) {
     const data = read();
     const pomodoroSection = data.find(section => section.id === sectionId);
-
     if (!pomodoroSection) {
       throw new Error("Section can't be found");
     }

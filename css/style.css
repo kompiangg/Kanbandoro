@@ -56,6 +56,10 @@ header .title h1 {
   text-decoration-thickness: 3px;
 }
 
+.modal-sm {
+  max-width: 400px;
+}
+
 .pomodoro__settings button{
   display: flex;
   align-items: center;
@@ -95,6 +99,10 @@ header .title h1 {
 
 .pomodoro__modal {
   color: black;
+}
+
+.pomodoro__modal-settings {
+  font-weight: 700;
 }
 
 .pomodoro__sections {
@@ -164,8 +172,18 @@ header .title h1 {
   box-shadow: rgb(235 235 235) 0px 0px 0px;
 }
 
+.pomodoro__input-time {
+  margin-top: 10px;
+  padding: 4px 10px;
+  width: 100%;
+  background-color: whitesmoke;
+  border: none;
+  border-radius: 5px;
+}
+
 .kanban__column {
   padding-right: 40px;
+  margin-bottom: 20px;
 }
 
 .kanban__column hr{
@@ -215,6 +233,7 @@ header .title h1 {
   border-radius: 5px;
   background: rgba(0, 0, 0, 0.404);
   color: white;
+  font-weight: 800;
   position: relative;
 }
 
@@ -226,4 +245,5 @@ header .title h1 {
   right: -5px;
   bottom: -5px;
   border: rgba(0, 0, 0, 0.404) 3px dashed;
+  border-radius: 5px;
 }
