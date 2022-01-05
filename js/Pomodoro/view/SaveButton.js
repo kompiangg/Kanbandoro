@@ -9,6 +9,11 @@ export default class SaveButton {
         const itemTimeValue = item.value
         PomodoroAPI.setItem(itemSectionId, {time: itemTimeValue});
       });
+      const timerElement = document.querySelector('.minute');
+      const currSectionElement = document.querySelector('.pomodoro__section-button-active');
+      const currSection = Number(currSectionElement.dataset.section_id);
+      const [currTime] = PomodoroAPI.getItem(currSection);
+      timerElement.textContent = currTime;
     });
   }
 }
